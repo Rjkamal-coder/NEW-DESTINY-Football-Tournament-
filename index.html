@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#075b35">
+  <title>NEW DESTINY Football Tournament</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="images/school-logo.jpg" alt="NEW DESTINY Basic Education High School logo" class="school-logo">
+      <div class="school-heading">
+        <p class="eyebrow">SCHOOL FOOTBALL TOURNAMENT</p>
+        <h1>NEW DESTINY <span>Football Cup</span></h1>
+        <p class="subtitle">NEW DESTINY Basic Education High School</p>
+      </div>
+      <div class="cup-badge" aria-hidden="true">🏆<small>2026</small></div>
+    </div>
+    <nav class="main-nav">
+      <a href="#overview">Overview</a>
+      <a href="#fixtures">Fixtures & Results</a>
+      <a href="#tables">League Tables</a>
+      <a href="#knockout">Semi-finals & Final</a>
+      <a href="#admin">Update Results</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <span class="live-pill"><span class="dot"></span> TOURNAMENT CENTRE</span>
+        <h2>One School.<br><span>Six Teams. One Champion.</span></h2>
+        <p>Follow every fixture, update match scores, and watch the league tables update automatically using Premier League-style points and goal difference.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#fixtures">View Fixtures</a>
+          <a class="button button-outline" href="#admin">Enter Match Results</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top"><span>TOURNAMENT FORMAT</span><span>⚽</span></div>
+        <div class="format-row"><strong>06</strong><span>Teams</span></div>
+        <div class="format-row"><strong>02</strong><span>Groups · 3 teams each</span></div>
+        <div class="format-row"><strong>06</strong><span>Group matches · Friday</span></div>
+        <div class="format-row"><strong>02</strong><span>Semi-finals · Saturday</span></div>
+        <div class="format-row"><strong>01</strong><span>Grand final · Saturday</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="fixtures">
+      <div class="section-heading">
+        <div><p class="section-kicker">THE MATCHDAY</p><h2>Fixtures & Results</h2></div>
+        <p class="section-note">Enter scores in the Update Results area. Match cards and tables will refresh automatically.</p>
+      </div>
+      <div class="matchday-label"><span>FRIDAY</span><strong>Group Stage · All 6 matches</strong><small>Each team plays two group matches</small></div>
+      <div id="groupFixtures" class="fixture-grid"></div>
+      <div class="matchday-label saturday"><span>SATURDAY</span><strong>Knockout Day</strong><small>Semi-finals followed by the final</small></div>
+      <div id="knockoutFixtures" class="fixture-grid knockout-fixtures"></div>
+    </section>
+
+    <section class="section table-section" id="tables">
+      <div class="section-heading">
+        <div><p class="section-kicker">PREMIER LEAGUE-STYLE RANKING</p><h2>League Tables</h2></div>
+        <div class="legend"><span><i class="qualifier-key"></i> Semi-final qualification</span><span><i class="relegation-key"></i> Bottom team / relegated</span></div>
+      </div>
+      <div class="tables-grid">
+        <div class="league-card">
+          <div class="league-title"><span class="group-tag">GROUP I</span><h3>Group I Table</h3></div>
+          <div class="table-scroll"><table><thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr></thead><tbody id="tableA"></tbody></table></div>
+          <p class="table-footnote">Top 2 qualify · 3rd place is relegated</p>
+        </div>
+        <div class="league-card">
+          <div class="league-title"><span class="group-tag group-b">GROUP II</span><h3>Group II Table</h3></div>
+          <div class="table-scroll"><table><thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr></thead><tbody id="tableB"></tbody></table></div>
+          <p class="table-footnote">Top 2 qualify · 3rd place is relegated</p>
+        </div>
+      </div>
+      <div class="rules-card"><h3>🏅 Points & ranking rules</h3><div class="rules-grid"><div><strong>3 points</strong><span>Win</span></div><div><strong>1 point</strong><span>Draw</span></div><div><strong>0 points</strong><span>Loss</span></div><div><strong>Goal difference</strong><span>Goals for − goals against</span></div></div><p>Teams are ranked by points, then goal difference, then goals scored.</p></div>
+    </section>
+
+    <section class="section" id="knockout">
+      <div class="section-heading"><div><p class="section-kicker">WIN OR GO HOME</p><h2>Semi-finals & Final</h2></div><p class="section-note">Qualifiers are filled automatically when group results are entered.</p></div>
+      <div class="bracket">
+        <div class="bracket-match"><span class="round-label">SEMI-FINAL 1 · SATURDAY</span><div class="bracket-team"><span id="sf1a">Group I · 1st</span><b id="sf1ascore">—</b></div><div class="bracket-team"><span id="sf1b">Group II · 2nd</span><b id="sf1bscore">—</b></div><small>Winner advances to the final</small></div>
+        <div class="bracket-match"><span class="round-label">SEMI-FINAL 2 · SATURDAY</span><div class="bracket-team"><span id="sf2a">Group II · 1st</span><b id="sf2ascore">—</b></div><div class="bracket-team"><span id="sf2b">Group I · 2nd</span><b id="sf2bscore">—</b></div><small>Winner advances to the final</small></div>
+        <div class="final-match"><span class="round-label">🏆 GRAND FINAL · SATURDAY</span><div class="bracket-team"><span id="finala">Semi-final 1 winner</span><b id="finalascore">—</b></div><div class="bracket-team"><span id="finalb">Semi-final 2 winner</span><b id="finalbscore">—</b></div><small id="championText">The champion will be shown here after the final.</small></div>
+      </div>
+    </section>
+
+    <!--<section class="section admin-section" id="admin">
+      <div class="section-heading">
+        <div><p class="section-kicker">EDIT THE JAVASCRIPT FILE</p><h2>Update Match Results</h2></div>
+        <p class="section-note">Match scores are controlled from script.js. Once you save your changes, the tables and rankings calculate automatically.</p>
+      </div>
+      <div class="admin-card code-instructions">
+        <h3>How to enter results in <code>script.js</code></h3>
+        <ol>
+          <li>Open <code>script.js</code> in Acode or another code editor.</li>
+          <li>Find the <code>MATCH_RESULTS</code> section near the top.</li>
+          <li>Replace <code>null</code> with the home and away goals for each match.</li>
+          <li>Save the file and refresh the website. If it is online, upload/commit the updated file to GitHub so Vercel can redeploy it.</li>
+        </ol>
+        <div class="code-example"><span>// Example: Group A Match 1 finished 2–1</span><br>G1: { home: 2, away: 1 },<br><span>// Example: Group B Match 1 finished 0–0</span><br>G4: { home: 0, away: 0 },</div>
+        <p class="muted"><strong>Important:</strong> Results entered in JavaScript are published with the website code. There is no on-page score-entry form. The league tables use 3 points for a win, 1 for a draw, and 0 for a loss; teams are ranked by points, goal difference, then goals scored.</p>
+      </div>
+    </section>-->
+  </main>
+
+  <footer class="site-footer">
+    <img src="images/school-logo.jpg" alt="" class="footer-logo">
+    <div><strong>NEW DESTINY Basic Education High School</strong><p>Football Tournament · Fair Play · Teamwork · Respect</p></div>
+    <a href="#overview">Back to top ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
