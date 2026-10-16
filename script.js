@@ -32,7 +32,7 @@ const MATCH_RESULTS = {
   G3: null, // Group A: Team A3 vs Team A1
   G4: null, // Group B: Team B1 vs Team B2
   G5: null, // Group B: Team B2 vs Team B3
-  G6: null, // Group B: Team B3 vs Team B1
+  G6:  { home: 1, away: 0 }, // Group B: Team B3 vs Team B1
 
   // SATURDAY — KNOCKOUT STAGE
   SF1: null, // Group A 1st vs Group B 2nd
