@@ -28,10 +28,10 @@ const TEAMS = [
 const MATCH_RESULTS = {
   // FRIDAY — GROUP STAGE (each team plays two matches)
   G1: { home: 0, away: 0 }, // Group A: Team A1 vs Team A2, e.g. { home: 2, away: 1 }
-  G2: null, // Group A: Team A2 vs Team A3
+  G2: { home: 1, away: 1 }, // Group A: Team A2 vs Team A3
   G3:  { home: 0, away: 1 }, // Group A: Team A3 vs Team A1
   G4: { home: 5, away: 0 }, // Group B: Team B1 vs Team B2
-  G5: null, // Group B: Team B2 vs Team B3
+  G5: { home: 3, away: 2}, // Group B: Team B2 vs Team B3
   G6:  { home: 0, away: 1 }, // Group B: Team B3 vs Team B1
 
   // SATURDAY — KNOCKOUT STAGE
