@@ -35,8 +35,8 @@ const MATCH_RESULTS = {
   G6:  { home: 0, away: 1 }, // Group B: Team B3 vs Team B1
 
   // SATURDAY — KNOCKOUT STAGE
-  SF1: { home: 4, away: 3}, // Group A 1st vs Group B 2nd
-  SF2: null, // Group B 1st vs Group A 2nd
+  SF1: null, // Group A 1st vs Group B 2nd
+  SF2: { home: 4, away: 3 }, // Group B 1st vs Group A 2nd
   F: null    // Semi-final 1 winner vs Semi-final 2 winner
 };
 
